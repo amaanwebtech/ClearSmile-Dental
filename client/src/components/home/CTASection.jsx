@@ -20,7 +20,7 @@ const CTASection = () => {
             <FaCalendarCheck /> Book an Appointment
           </Link>
           <a
-            href="tel:+11234567890"
+            href="tel:+918791601241"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
           >
             <FaPhoneAlt /> Call Us Now

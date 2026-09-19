@@ -40,7 +40,7 @@ const ContactForm = () => {
       </div>
       <div>
         <label className={labelClass}>Phone Number</label>
-        <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+1 (123) 456-7890" className={inputClass} />
+        <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+91 87916 01241" className={inputClass} />
       </div>
       <div>
         <label className={labelClass}>Subject</label>

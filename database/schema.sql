@@ -95,10 +95,10 @@ CREATE TABLE IF NOT EXISTS contact_messages (
 -- Seed data
 -- ------------------------------------------------------------
 
--- Default admin: email admin@clearsmile.com / password Admin@123
+-- Default admin: email amaan.web.developer.8791@gmail.com / password Admin@123
 -- (password hash generated with bcrypt, cost 10)
 INSERT INTO admins (name, email, password) VALUES
-('Admin', 'admin@clearsmile.com', '$2a$10$bIBjJINkUKP0I1EV9UUnm.nKtrxeHd1Y2hWSA9CkMxOsUg/8UtarC')
+('Admin', 'amaan.web.developer.8791@gmail.com', '$2a$10$bIBjJINkUKP0I1EV9UUnm.nKtrxeHd1Y2hWSA9CkMxOsUg/8UtarC')
 ON DUPLICATE KEY UPDATE email = email;
 
 INSERT INTO doctors (name, specialization, qualification, bio, image_url, experience_years) VALUES

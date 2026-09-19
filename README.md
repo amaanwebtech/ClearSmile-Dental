@@ -43,7 +43,7 @@ Start MySQL (e.g. via XAMPP Control Panel), then import the schema:
 
 This creates the `clearsmile_dental` database with tables and seed data (services, doctors, testimonials, and a default admin account).
 
-**Default admin login:** `admin@clearsmile.com` / `Admin@123` — change this after first login.
+**Default admin login:** `amaan.web.developer.8791@gmail.com` / `Admin@123` — change this after first login.
 
 ### 2. Backend
 

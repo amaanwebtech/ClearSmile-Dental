@@ -3,9 +3,9 @@ import PageHeader from '../components/common/PageHeader';
 import ContactForm from '../components/forms/ContactForm';
 
 const infoCards = [
-  { icon: FaMapMarkerAlt, title: 'Our Location', text: '123 Smile Avenue, Downtown, City 45678' },
-  { icon: FaPhoneAlt, title: 'Phone Number', text: '+1 (123) 456-7890' },
-  { icon: FaEnvelope, title: 'Email Address', text: 'hello@clearsmiledental.com' },
+  { icon: FaMapMarkerAlt, title: 'Our Location', text: 'Baraut, Uttar Pradesh, India' },
+  { icon: FaPhoneAlt, title: 'Phone Number', text: '+91 87916 01241' },
+  { icon: FaEnvelope, title: 'Email Address', text: 'amaan.web.developer.8791@gmail.com' },
   { icon: FaClock, title: 'Working Hours', text: 'Mon–Fri: 9AM–8PM · Sat: 10AM–6PM' },
 ];
 
@@ -39,7 +39,7 @@ const Contact = () => {
           <div className="mx-auto mt-16 max-w-5xl overflow-hidden rounded-3xl">
             <iframe
               title="Clinic Location Map"
-              src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Baraut%2C%20Uttar%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
               className="h-80 w-full border-0"
               loading="lazy"
             />

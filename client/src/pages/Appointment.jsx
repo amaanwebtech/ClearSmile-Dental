@@ -24,13 +24,13 @@ const Appointment = () => {
               <h3 className="font-heading text-lg font-semibold">Clinic Information</h3>
               <ul className="mt-5 space-y-4 text-sm text-primary-100">
                 <li className="flex items-start gap-3">
-                  <FaMapMarkerAlt className="mt-1 shrink-0" /> 123 Smile Avenue, Downtown, City 45678
+                  <FaMapMarkerAlt className="mt-1 shrink-0" /> Baraut, Uttar Pradesh, India
                 </li>
                 <li className="flex items-start gap-3">
-                  <FaPhoneAlt className="mt-1 shrink-0" /> +1 (123) 456-7890
+                  <FaPhoneAlt className="mt-1 shrink-0" /> +91 87916 01241
                 </li>
                 <li className="flex items-start gap-3">
-                  <FaEnvelope className="mt-1 shrink-0" /> hello@clearsmiledental.com
+                  <FaEnvelope className="mt-1 shrink-0" /> amaan.web.developer.8791@gmail.com
                 </li>
                 <li className="flex items-start gap-3">
                   <FaClock className="mt-1 shrink-0" /> Mon–Fri: 9AM–8PM · Sat: 10AM–6PM
@@ -44,7 +44,7 @@ const Appointment = () => {
                 For dental emergencies, please call us directly for the fastest response.
               </p>
               <a
-                href="tel:+11234567890"
+                href="tel:+918791601241"
                 className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-700"
               >
                 <FaPhoneAlt size={12} /> Call Now

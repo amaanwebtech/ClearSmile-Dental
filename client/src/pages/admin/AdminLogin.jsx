@@ -45,7 +45,7 @@ const AdminLogin = () => {
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              placeholder="admin@clearsmile.com"
+              placeholder="amaan.web.developer.8791@gmail.com"
               className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-100"
             />
           </div>

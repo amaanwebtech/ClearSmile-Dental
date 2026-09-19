@@ -62,13 +62,13 @@ const Footer = () => {
             <h4 className="font-heading text-sm font-semibold uppercase tracking-wide text-white">Contact Us</h4>
             <ul className="mt-4 space-y-3 text-sm text-primary-200">
               <li className="flex items-start gap-2">
-                <FaMapMarkerAlt className="mt-0.5 shrink-0" /> 123 Smile Avenue, Downtown, City 45678
+                <FaMapMarkerAlt className="mt-0.5 shrink-0" /> Baraut, Uttar Pradesh, India
               </li>
               <li className="flex items-center gap-2">
-                <FaPhoneAlt className="shrink-0" /> +1 (123) 456-7890
+                <FaPhoneAlt className="shrink-0" /> +91 87916 01241
               </li>
               <li className="flex items-center gap-2">
-                <FaEnvelope className="shrink-0" /> hello@clearsmiledental.com
+                <FaEnvelope className="shrink-0" /> amaan.web.developer.8791@gmail.com
               </li>
             </ul>
           </div>

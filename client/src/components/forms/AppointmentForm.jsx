@@ -82,7 +82,7 @@ const AppointmentForm = ({ compact = false }) => {
           required
           value={form.phone}
           onChange={handleChange}
-          placeholder="+1 (123) 456-7890"
+          placeholder="+91 87916 01241"
           className={inputClass}
         />
       </div>
