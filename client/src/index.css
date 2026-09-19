@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --color-primary-50: #eefdfb;
+  --color-primary-100: #d4f7f1;
+  --color-primary-200: #a9eee3;
+  --color-primary-300: #72dfd0;
+  --color-primary-400: #3fc9b8;
+  --color-primary-500: #1fac9d;
+  --color-primary-600: #158a80;
+  --color-primary-700: #146f68;
+  --color-primary-800: #145955;
+  --color-primary-900: #134a47;
+  --color-primary-950: #062b2a;
+
+  --color-accent-50: #fdf8ed;
+  --color-accent-100: #faedc9;
+  --color-accent-200: #f5d98d;
+  --color-accent-300: #efc158;
+  --color-accent-400: #e9ac36;
+  --color-accent-500: #dd8f22;
+  --color-accent-600: #bd6d19;
+  --color-accent-700: #964f18;
+  --color-accent-800: #7a3f1a;
+  --color-accent-900: #663519;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-950);
+}

@@ -1,0 +1,60 @@
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
+import PageHeader from '../components/common/PageHeader';
+import AppointmentForm from '../components/forms/AppointmentForm';
+
+const Appointment = () => {
+  return (
+    <>
+      <PageHeader title="Book an Appointment" subtitle="Fill out the form below and our team will confirm your slot shortly." />
+
+      <section className="bg-white py-20">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+          <div className="lg:col-span-2 rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-10">
+            <h2 className="font-heading text-2xl font-bold text-gray-900">Appointment Details</h2>
+            <p className="mt-2 text-sm text-gray-600">
+              All fields marked with * are required. We'll reach out via phone or email to confirm your visit.
+            </p>
+            <div className="mt-8">
+              <AppointmentForm />
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="rounded-3xl bg-primary-950 p-8 text-white">
+              <h3 className="font-heading text-lg font-semibold">Clinic Information</h3>
+              <ul className="mt-5 space-y-4 text-sm text-primary-100">
+                <li className="flex items-start gap-3">
+                  <FaMapMarkerAlt className="mt-1 shrink-0" /> 123 Smile Avenue, Downtown, City 45678
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaPhoneAlt className="mt-1 shrink-0" /> +1 (123) 456-7890
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaEnvelope className="mt-1 shrink-0" /> hello@clearsmiledental.com
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaClock className="mt-1 shrink-0" /> Mon–Fri: 9AM–8PM · Sat: 10AM–6PM
+                </li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-primary-100 bg-primary-50 p-8">
+              <h3 className="font-heading text-lg font-semibold text-primary-900">Need Immediate Help?</h3>
+              <p className="mt-2 text-sm text-primary-800">
+                For dental emergencies, please call us directly for the fastest response.
+              </p>
+              <a
+                href="tel:+11234567890"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-700"
+              >
+                <FaPhoneAlt size={12} /> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Appointment;
