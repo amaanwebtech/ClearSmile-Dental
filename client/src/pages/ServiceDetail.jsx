@@ -6,6 +6,7 @@ import PageHeader from '../components/common/PageHeader';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import ImagePlaceholder from '../components/common/ImagePlaceholder';
 import { getServiceIcon } from '../utils/iconMap';
+import Reveal from '../components/common/Reveal';
 import NotFound from './NotFound';
 
 const ServiceDetail = () => {
@@ -35,13 +36,15 @@ const ServiceDetail = () => {
 
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <ImagePlaceholder src={service.image_url} alt={service.title} icon={Icon} className="aspect-[4/3] w-full rounded-3xl" />
+          <Reveal as="scale">
+            <ImagePlaceholder src={service.image_url} alt={service.title} icon={Icon} className="aspect-[4/3] w-full rounded-3xl shadow-premium-lg" />
+          </Reveal>
 
-          <div>
+          <Reveal delay={0.1}>
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-600">
               <Icon size={26} />
             </div>
-            <h2 className="mt-5 font-heading text-2xl font-bold text-gray-900">{service.title}</h2>
+            <h2 className="mt-5 font-heading text-2xl font-semibold tracking-tight text-gray-900">{service.title}</h2>
             <p className="mt-4 text-base leading-relaxed text-gray-600">{service.description}</p>
 
             {Number(service.price) > 0 && (
@@ -52,11 +55,11 @@ const ServiceDetail = () => {
 
             <Link
               to="/appointment"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary-600 px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary-600 px-7 py-3.5 text-sm font-semibold text-white shadow-premium transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-700 hover:shadow-glow"
             >
               <FaCalendarCheck /> Book This Service
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

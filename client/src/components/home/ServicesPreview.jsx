@@ -5,6 +5,7 @@ import api from '../../api/axios';
 import SectionHeading from '../common/SectionHeading';
 import ServiceCard from '../common/ServiceCard';
 import LoadingSpinner from '../common/LoadingSpinner';
+import Reveal, { RevealGroup, RevealItem } from '../common/Reveal';
 
 const ServicesPreview = () => {
   const [services, setServices] = useState([]);
@@ -31,21 +32,23 @@ const ServicesPreview = () => {
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <RevealGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+              <RevealItem key={service.id} className="h-full">
+                <ServiceCard service={service} />
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         )}
 
-        <div className="mt-12 text-center">
+        <Reveal className="mt-12 text-center" delay={0.1}>
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-600 hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white px-6 py-3 text-sm font-semibold text-primary-700 shadow-premium transition-all hover:-translate-y-0.5 hover:bg-primary-600 hover:text-white hover:shadow-glow"
           >
             View All Services <FaArrowRight size={12} />
           </Link>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

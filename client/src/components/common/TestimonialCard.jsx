@@ -3,7 +3,7 @@ import Avatar from './Avatar';
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="flex h-full flex-col rounded-2xl bg-white p-7 shadow-sm ring-1 ring-gray-100">
+    <div className="flex h-full flex-col rounded-2xl bg-white p-7 shadow-premium ring-1 ring-gray-100 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-premium-lg">
       <FaQuoteLeft className="text-2xl text-primary-200" />
       <p className="mt-4 flex-1 text-sm leading-relaxed text-gray-700">"{testimonial.message}"</p>
       <div className="mt-5 flex items-center gap-3 border-t border-gray-100 pt-4">

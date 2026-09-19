@@ -4,6 +4,7 @@ import PageHeader from '../components/common/PageHeader';
 import DoctorCard from '../components/common/DoctorCard';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import CTASection from '../components/home/CTASection';
+import { RevealGroup, RevealItem } from '../components/common/Reveal';
 
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
@@ -28,11 +29,13 @@ const Doctors = () => {
           ) : doctors.length === 0 ? (
             <p className="text-center text-gray-500">No doctors available right now.</p>
           ) : (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {doctors.map((doctor) => (
-                <DoctorCard key={doctor.id} doctor={doctor} />
+                <RevealItem key={doctor.id} className="h-full">
+                  <DoctorCard doctor={doctor} />
+                </RevealItem>
               ))}
-            </div>
+            </RevealGroup>
           )}
         </div>
       </section>

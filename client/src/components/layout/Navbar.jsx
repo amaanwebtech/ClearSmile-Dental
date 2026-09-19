@@ -25,15 +25,15 @@ const Navbar = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur shadow-md' : 'bg-white'
+        scrolled ? 'bg-white/90 shadow-premium backdrop-blur-md' : 'bg-white'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-600 text-white shadow-sm transition-transform group-hover:scale-105">
+        <Link to="/" className="group flex items-center gap-2.5">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-600 text-white shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-glow">
             <FaTooth size={20} />
           </span>
-          <span className="font-heading text-xl font-bold text-primary-900">
+          <span className="font-heading text-xl font-semibold tracking-tight text-primary-900">
             ClearSmile <span className="text-primary-500">Dental</span>
           </span>
         </Link>
@@ -45,26 +45,35 @@ const Navbar = () => {
               to={link.to}
               end={link.to === '/'}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors hover:text-primary-600 ${
+                `group relative py-1 text-sm font-medium transition-colors hover:text-primary-600 ${
                   isActive ? 'text-primary-600' : 'text-gray-700'
                 }`
               }
             >
-              {link.label}
+              {({ isActive }) => (
+                <>
+                  {link.label}
+                  <span
+                    className={`absolute -bottom-0.5 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-primary-500 transition-transform duration-300 group-hover:scale-x-100 ${
+                      isActive ? 'scale-x-100' : ''
+                    }`}
+                  />
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-5">
           <a
             href="tel:+918791601241"
-            className="flex items-center gap-2 text-sm font-semibold text-primary-700"
+            className="flex items-center gap-2 text-sm font-semibold text-primary-700 transition-colors hover:text-primary-800"
           >
             <FaPhoneAlt /> +91 87916 01241
           </a>
           <Link
             to="/appointment"
-            className="rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary-700 hover:shadow-md"
+            className="rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-700 hover:shadow-glow"
           >
             Book Appointment
           </Link>

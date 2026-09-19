@@ -4,6 +4,7 @@ import PageHeader from '../components/common/PageHeader';
 import ServiceCard from '../components/common/ServiceCard';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import CTASection from '../components/home/CTASection';
+import { RevealGroup, RevealItem } from '../components/common/Reveal';
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -28,11 +29,13 @@ const Services = () => {
           ) : services.length === 0 ? (
             <p className="text-center text-gray-500">No services available right now.</p>
           ) : (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
-                <ServiceCard key={service.id} service={service} />
+                <RevealItem key={service.id} className="h-full">
+                  <ServiceCard service={service} />
+                </RevealItem>
               ))}
-            </div>
+            </RevealGroup>
           )}
         </div>
       </section>

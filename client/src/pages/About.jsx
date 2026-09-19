@@ -2,6 +2,8 @@ import { FaCheckCircle } from 'react-icons/fa';
 import PageHeader from '../components/common/PageHeader';
 import SectionHeading from '../components/common/SectionHeading';
 import ImagePlaceholder from '../components/common/ImagePlaceholder';
+import AnimatedCounter from '../components/common/AnimatedCounter';
+import Reveal, { RevealGroup, RevealItem } from '../components/common/Reveal';
 import CTASection from '../components/home/CTASection';
 
 const values = [
@@ -11,6 +13,12 @@ const values = [
   'Flexible scheduling including weekend slots',
 ];
 
+const stats = [
+  { to: 15000, suffix: '+', label: 'Smiles Treated' },
+  { to: 15, suffix: '+', label: 'Years of Excellence' },
+  { to: 4, suffix: '', label: 'Specialist Dentists' },
+];
+
 const About = () => {
   return (
     <>
@@ -18,17 +26,19 @@ const About = () => {
 
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <ImagePlaceholder
-            src="/images/about-clinic.jpg"
-            alt="Inside ClearSmile Dental clinic"
-            className="aspect-[4/3] w-full rounded-3xl shadow-lg"
-          />
+          <Reveal as="scale">
+            <ImagePlaceholder
+              src="/images/about-clinic.jpg"
+              alt="Inside ClearSmile Dental clinic"
+              className="aspect-[4/3] w-full rounded-3xl shadow-premium-lg"
+            />
+          </Reveal>
 
-          <div>
-            <span className="inline-block rounded-full bg-primary-50 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-600">
-              Our Story
+          <Reveal delay={0.1}>
+            <span className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-700 ring-1 ring-primary-100">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary-500" /> Our Story
             </span>
-            <h2 className="mt-4 font-heading text-3xl font-bold text-gray-900">
+            <h2 className="mt-5 font-heading text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
               15+ Years of Creating Confident Smiles
             </h2>
             <p className="mt-5 text-base leading-relaxed text-gray-600">
@@ -49,7 +59,7 @@ const About = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -61,18 +71,18 @@ const About = () => {
             description="We believe everyone deserves a healthy, confident smile — delivered with compassion, transparency, and clinical excellence."
           />
 
-          <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {[
-              { stat: '15,000+', label: 'Smiles Treated' },
-              { stat: '15+', label: 'Years of Excellence' },
-              { stat: '4', label: 'Specialist Dentists' },
-            ].map((item) => (
-              <div key={item.label} className="rounded-2xl bg-white p-8 text-center shadow-sm">
-                <p className="font-heading text-4xl font-bold text-primary-600">{item.stat}</p>
-                <p className="mt-2 text-sm font-medium text-gray-600">{item.label}</p>
-              </div>
+          <RevealGroup className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-3">
+            {stats.map((item) => (
+              <RevealItem key={item.label} as="scale">
+                <div className="rounded-2xl bg-white p-8 text-center shadow-premium transition-all duration-500 hover:-translate-y-1 hover:shadow-premium-lg">
+                  <p className="font-heading text-4xl font-semibold text-primary-600">
+                    <AnimatedCounter to={item.to} suffix={item.suffix} />
+                  </p>
+                  <p className="mt-2 text-sm font-medium text-gray-600">{item.label}</p>
+                </div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </section>
 

@@ -54,7 +54,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full rounded-lg bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+          className="w-full rounded-lg bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-premium transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-700 hover:shadow-glow disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 sm:w-auto"
         >
           {submitting ? 'Sending...' : 'Send Message'}
         </button>

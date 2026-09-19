@@ -3,6 +3,7 @@ import api from '../../api/axios';
 import SectionHeading from '../common/SectionHeading';
 import TestimonialCard from '../common/TestimonialCard';
 import LoadingSpinner from '../common/LoadingSpinner';
+import { RevealGroup, RevealItem } from '../common/Reveal';
 
 const TestimonialsSection = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -31,11 +32,13 @@ const TestimonialsSection = () => {
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.slice(0, 4).map((t) => (
-              <TestimonialCard key={t.id} testimonial={t} />
+              <RevealItem key={t.id} className="h-full">
+                <TestimonialCard testimonial={t} />
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         )}
       </div>
     </section>

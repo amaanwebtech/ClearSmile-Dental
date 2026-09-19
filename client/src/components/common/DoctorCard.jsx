@@ -3,9 +3,9 @@ import Avatar from './Avatar';
 
 const DoctorCard = ({ doctor }) => {
   return (
-    <div className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div className="group h-full overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-premium transition-all duration-500 hover:-translate-y-1.5 hover:shadow-premium-lg">
       <div className="aspect-[4/3] overflow-hidden">
-        <Avatar src={doctor.image_url} name={doctor.name} className="transition-transform duration-500 group-hover:scale-105" />
+        <Avatar src={doctor.image_url} name={doctor.name} className="transition-transform duration-700 ease-out group-hover:scale-110" />
       </div>
       <div className="p-6">
         <h3 className="font-heading text-lg font-semibold text-gray-900">{doctor.name}</h3>
@@ -19,7 +19,7 @@ const DoctorCard = ({ doctor }) => {
               <a
                 key={i}
                 href="#"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-50 text-gray-500 transition-colors hover:bg-primary-600 hover:text-white"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-50 text-gray-500 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600 hover:text-white"
               >
                 <Icon size={12} />
               </a>

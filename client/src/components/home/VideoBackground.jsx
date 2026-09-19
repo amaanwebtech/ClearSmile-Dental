@@ -60,6 +60,7 @@ const VideoBackground = () => {
         src="/videos/hero-smile.mp4"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-primary-950/75 via-primary-950/55 to-primary-950/80" />
+      <div className="grain-overlay" />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import api from '../../api/axios';
 import SectionHeading from '../common/SectionHeading';
 import DoctorCard from '../common/DoctorCard';
 import LoadingSpinner from '../common/LoadingSpinner';
+import Reveal, { RevealGroup, RevealItem } from '../common/Reveal';
 
 const DoctorsPreview = () => {
   const [doctors, setDoctors] = useState([]);
@@ -31,21 +32,23 @@ const DoctorsPreview = () => {
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {doctors.map((doctor) => (
-              <DoctorCard key={doctor.id} doctor={doctor} />
+              <RevealItem key={doctor.id} className="h-full">
+                <DoctorCard doctor={doctor} />
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         )}
 
-        <div className="mt-12 text-center">
+        <Reveal className="mt-12 text-center" delay={0.1}>
           <Link
             to="/doctors"
-            className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-600 hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white px-6 py-3 text-sm font-semibold text-primary-700 shadow-premium transition-all hover:-translate-y-0.5 hover:bg-primary-600 hover:text-white hover:shadow-glow"
           >
             Meet The Full Team <FaArrowRight size={12} />
           </Link>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

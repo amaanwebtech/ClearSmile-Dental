@@ -11,7 +11,7 @@ const Footer = () => {
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-600 text-white">
                 <FaTooth size={18} />
               </span>
-              <span className="font-heading text-lg font-bold text-white">ClearSmile Dental</span>
+              <span className="font-heading text-lg font-semibold tracking-tight text-white">ClearSmile Dental</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-primary-200">
               Premium, gentle dental care for the whole family — combining modern technology with a warm,
@@ -22,7 +22,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-900 text-primary-200 transition-colors hover:bg-primary-600 hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-900 text-primary-200 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600 hover:text-white"
                 >
                   <Icon size={14} />
                 </a>
