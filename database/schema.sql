@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS contact_messages (
 -- Default admin: email admin@clearsmile.com / password Admin@123
 -- (password hash generated with bcrypt, cost 10)
 INSERT INTO admins (name, email, password) VALUES
-('Admin', 'admin@clearsmile.com', '$2b$10$4bZbF5b2W8L1x0f0uKZ3s.CFy5J3H2h1jjr9zZ7pQeJmS6b0ohh6y')
+('Admin', 'admin@clearsmile.com', '$2a$10$bIBjJINkUKP0I1EV9UUnm.nKtrxeHd1Y2hWSA9CkMxOsUg/8UtarC')
 ON DUPLICATE KEY UPDATE email = email;
 
 INSERT INTO doctors (name, specialization, qualification, bio, image_url, experience_years) VALUES
