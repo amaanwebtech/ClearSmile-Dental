@@ -1,4 +1,4 @@
-import Hero from '../components/home/Hero';
+import ScrollVideoHero from '../components/home/ScrollVideoHero';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import ServicesPreview from '../components/home/ServicesPreview';
 import DoctorsPreview from '../components/home/DoctorsPreview';
@@ -8,7 +8,7 @@ import CTASection from '../components/home/CTASection';
 const Home = () => {
   return (
     <>
-      <Hero />
+      <ScrollVideoHero />
       <WhyChooseUs />
       <ServicesPreview />
       <DoctorsPreview />

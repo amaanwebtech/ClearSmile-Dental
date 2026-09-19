@@ -1,17 +1,15 @@
-import { GiTooth, GiToothbrush, GiMedicines } from 'react-icons/gi';
-import { FaTeethOpen, FaUserMd, FaHospitalAlt, FaSmile, FaXRay } from 'react-icons/fa';
 import PageHeader from '../components/common/PageHeader';
 import ImagePlaceholder from '../components/common/ImagePlaceholder';
 
 const galleryItems = [
-  { label: 'Reception & Lounge', icon: FaHospitalAlt },
-  { label: 'Treatment Room', icon: GiTooth },
-  { label: 'Digital X-Ray Suite', icon: FaXRay },
-  { label: 'Sterilization Area', icon: GiMedicines },
-  { label: 'Consultation Room', icon: FaUserMd },
-  { label: 'Pediatric Corner', icon: FaSmile },
-  { label: 'Orthodontic Station', icon: GiToothbrush },
-  { label: 'Recovery Lounge', icon: FaTeethOpen },
+  { label: 'Reception & Lounge', src: '/images/gallery/reception.jpg' },
+  { label: 'Treatment Room', src: '/images/gallery/treatment-room.jpg' },
+  { label: 'Digital X-Ray Suite', src: '/images/gallery/xray-suite.jpg' },
+  { label: 'Sterilization Area', src: '/images/gallery/sterilization.jpg' },
+  { label: 'Consultation Room', src: '/images/gallery/consultation.jpg' },
+  { label: 'Pediatric Corner', src: '/images/gallery/pediatric-corner.jpg' },
+  { label: 'Orthodontic Station', src: '/images/gallery/orthodontic-station.jpg' },
+  { label: 'Recovery Lounge', src: '/images/gallery/recovery-lounge.jpg' },
 ];
 
 const Gallery = () => {
@@ -23,9 +21,9 @@ const Gallery = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
             {galleryItems.map((item) => (
-              <div key={item.label} className="group overflow-hidden rounded-2xl">
+              <div key={item.label} className="group overflow-hidden rounded-2xl shadow-sm">
                 <ImagePlaceholder
-                  icon={item.icon}
+                  src={item.src}
                   alt={item.label}
                   className="aspect-square w-full transition-transform duration-500 group-hover:scale-105"
                 />

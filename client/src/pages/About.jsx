@@ -1,7 +1,7 @@
 import { FaCheckCircle } from 'react-icons/fa';
-import { GiTooth } from 'react-icons/gi';
 import PageHeader from '../components/common/PageHeader';
 import SectionHeading from '../components/common/SectionHeading';
+import ImagePlaceholder from '../components/common/ImagePlaceholder';
 import CTASection from '../components/home/CTASection';
 
 const values = [
@@ -18,11 +18,11 @@ const About = () => {
 
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div className="aspect-4/3 overflow-hidden rounded-3xl bg-gradient-to-br from-primary-100 via-primary-50 to-accent-50">
-            <div className="flex h-full w-full items-center justify-center">
-              <GiTooth className="text-primary-300" size={140} />
-            </div>
-          </div>
+          <ImagePlaceholder
+            src="/images/about-clinic.jpg"
+            alt="Inside ClearSmile Dental clinic"
+            className="aspect-[4/3] w-full rounded-3xl shadow-lg"
+          />
 
           <div>
             <span className="inline-block rounded-full bg-primary-50 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-600">

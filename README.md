@@ -73,4 +73,12 @@ Visit `http://localhost:5173/admin/login` (also linked in the site footer) to ma
 
 ## Adding Real Images
 
-Doctor, service, and testimonial photos default to elegant initial-based avatars when no image is set. To use real photos, drop files into `client/public/images/{doctors,services,testimonials}/` and set the matching `image_url` (e.g. `/images/doctors/dr-smith.jpg`) via the admin panel.
+Doctor, service, and testimonial photos default to elegant initial-based avatars when no image is set. The project ships with free stock photos already in place under `client/public/images/`. To swap in your own real clinic photos, replace the files in `client/public/images/{doctors,services,testimonials,gallery}/` (keep the same filenames) or set a new `image_url` (e.g. `/images/doctors/dr-smith.jpg`) via the admin panel.
+
+## Home Page Scroll Video
+
+The homepage hero (`client/src/components/home/ScrollVideoHero.jsx`) uses an Apple-style scroll-scrubbed video: as the user scrolls, the video's playback position is tied directly to scroll progress instead of playing automatically. To swap the clip, replace `client/public/videos/hero-smile.mp4` with your own short (5–20s) landscape video.
+
+## Media Credits
+
+Stock photos and video used as placeholders are free-to-use assets from [Pexels](https://www.pexels.com) and [Mixkit](https://mixkit.co), both licensed for commercial use with no attribution required. Replace them with your own clinic's photos/video whenever you're ready.

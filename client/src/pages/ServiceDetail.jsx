@@ -35,7 +35,7 @@ const ServiceDetail = () => {
 
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <ImagePlaceholder src={service.image_url} alt={service.title} icon={Icon} className="aspect-4/3 w-full rounded-3xl" />
+          <ImagePlaceholder src={service.image_url} alt={service.title} icon={Icon} className="aspect-[4/3] w-full rounded-3xl" />
 
           <div>
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-600">

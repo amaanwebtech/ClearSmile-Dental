@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 const DoctorCard = ({ doctor }) => {
   return (
     <div className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="aspect-4/3 overflow-hidden">
+      <div className="aspect-[4/3] overflow-hidden">
         <Avatar src={doctor.image_url} name={doctor.name} className="transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="p-6">
