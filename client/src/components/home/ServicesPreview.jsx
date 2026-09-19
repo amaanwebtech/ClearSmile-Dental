@@ -19,12 +19,13 @@ const ServicesPreview = () => {
   }, []);
 
   return (
-    <section className="bg-primary-50/50 py-20">
+    <section className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Our Services"
           title="Comprehensive Dental Treatments"
           description="From routine checkups to advanced cosmetic procedures, we offer complete dental care under one roof."
+          light
         />
 
         {loading ? (

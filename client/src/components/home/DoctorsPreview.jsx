@@ -19,12 +19,13 @@ const DoctorsPreview = () => {
   }, []);
 
   return (
-    <section className="bg-white py-20">
+    <section className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Meet Our Team"
           title="Experienced & Caring Specialists"
           description="Our board-certified dentists bring decades of combined experience to every treatment."
+          light
         />
 
         {loading ? (

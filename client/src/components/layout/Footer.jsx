@@ -3,7 +3,7 @@ import { FaTooth, FaFacebookF, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhoneAl
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-950 text-primary-100">
+    <footer className="relative z-10 bg-primary-950 text-primary-100">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
